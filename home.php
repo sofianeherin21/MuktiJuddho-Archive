@@ -1,0 +1,122 @@
+
+<?php 
+
+include 'myconfig.php';
+ ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Liberation War Archive</title>
+<style>
+   body{
+      background-color:black;
+	  }
+</style>
+
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='css//style.css' rel='stylesheet'>
+<link href='css//slide.css' rel='stylesheet'>
+   
+   
+   
+<body>
+
+  <div id="header">
+         
+		<img src="photos//rsz_head.jpg" style="height:100px;margin-left:50px;width:30%;">
+  </div>
+<div class="navv">
+<ul>
+    <li><a href="home.php">হোম</a></li>
+	<li><a href="about.php">গুরুত্বপূর্ণ ঘটনাসমূহ </a></li>
+	<li><a href="news.php">তৎকালীন সংবাদ</a></li>
+	<li><a href="interview.php">সাক্ষাৎকার</a></li>
+	<li><a>মিডিয়া</a>
+	    <ul>
+		  <li><a href="photos.php">ছবি</a></li>
+	      <li><a href="songs.php">দেশাত্নবোধক গান</a></li>
+		  <li><a href="movies.php">চলচ্চিত্র</a></li>
+		</ul>
+	</li>
+	<li><a href="blog.php">ব্লগ</a>
+	<?php session_start();
+	
+		     if(isset($_SESSION['logged']))
+			  $href="logout.php";
+		      
+		     else
+				 $href="loginlayout.php";
+		?>
+	
+	<li style="float:right"><a href="<?php echo $href; ?>" ><?php if(isset($_SESSION['logged'])) echo $_SESSION['username']; else echo " লগইন";?></a></li>
+	<li style="float:right"><a href="signup.html">সাইন আপ</a></li>
+</ul>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="photos//victory1.jpg" style="width:100%;height:450px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="photos//v2.jpg" style="width:100%;height:450px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="photos//v1.jpg" style="width:100%;height:450px">
+  <div class="text" "></div>
+</div>
+
+</div>
+<br><br><br>
+<div style="text-align:center"> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+
+</script>
+
+<h1> মুক্তিযুদ্ধ আর্কাইভ  </h1>
+<p class="contentt" style="width:100%">বাংলাদেশের স্বাধীনতা যুদ্ধ ছিল ১৯৭১ সালে সংঘটিত তৎকালীন পশ্চিম পাকিস্তানের বিরুদ্ধে পূর্ব পাকিস্তানের সশস্ত্র সংগ্রাম, যার মাধ্যমে বাংলাদেশ একটি স্বাধীন দেশ হিসাবে পৃথিবীর মানচিত্রে আত্মপ্রকাশ করে। ১৯৭১ সালের ২৫ মার্চ রাতের অন্ধকারে পাকিস্তানি সামরিক বাহিনী পূর্ব পাকিস্তানে বাঙালি নিধনে ঝাঁপিয়ে পড়লে একটি জনযুদ্ধের আদলে মুক্তিযুদ্ধ তথা স্বাধীনতা যুদ্ধের সূচনা ঘটে।[ মার্চের কালো রাতে পাকিস্তানি সামরিক বাহিনী ঢাকায় অজস্র সাধারণ নাগরিক, ছাত্র, শিক্ষক, বুদ্ধিজীবী, পুলিশ ও ই.পি.আর.-কে হত্যা করে এবং ১৯৭০ সালের সাধারণ নির্বাচনে নিরঙ্কুশ সংখ্যাগরিষ্ঠতাপ্রাপ্ত দল আওয়ামী লীগ প্রধান বাঙালিদের তৎকালীন জনপ্রিয় নেতা বঙ্গবন্ধু শেখ মুজিবুর রহমানকে গ্রেপ্তার করে। গ্রেফতারের পূর্বে ২৬ মার্চের প্রথম প্রহরে তিনি বাংলাদেশের স্বাধীনতা ঘোষণা করেন।[পরিকল্পিত গণহত্যার মুখে সারাদেশে শুরু হয়ে যায় প্রতিরোধযুদ্ধ; জীবন বাঁচাতে প্রায় ১ কোটি মানুষ পার্শ্ববর্তী দেশ ভারতে আশ্রয় গ্রহণ করে। পাকিস্তানি সামরিক বাহিনীর ইস্ট বেঙ্গল রেজিমেন্ট, ইস্ট পাকিস্তান রাইফেলস (ইপিআর), ইস্ট পাকিস্তান পুলিশ, সামরিক বাহিনীর বাঙালি সদস্য এবং সর্বোপরি বাংলাদেশের স্বাধীনতাকামী সাধারণ মানুষ দেশকে পাকিস্তানি সামরিক বাহিনীর কব্জা থেকে মুক্ত করতে কয়েক মাসের মধ্যে গড়ে তোলে মুক্তিবাহিনী। গেরিলা পদ্ধতিতে যুদ্ধ চালিয়ে মুক্তিবাহিনী সারাদেশে পাকিস্তানি হানাদার বাহিনীকে ব্যতিব্যস্ত করে তোলে। মুক্তিযুদ্ধ চলাকালীন সময়ে বাংলাদেশ ভারতের কাছ থেকে অর্থনৈতিক, সামরিক ও কূটনৈতিক সাহায্য লাভ করে। ডিসেম্বরের শুরুর দিকে যখন পাকিস্তানি সামরিক বাহিনীর পতন অনিবার্য হয়ে ওঠে, তখন তারা মুক্তিবাহিনীর কাছে পরাজয়ের লজ্জা এড়াবার জন্য এবং মুক্তিযুদ্ধকে আন্তর্জাতিক সংঘর্ষে পরিণত করার উদ্দেশ্যে ৩ ডিসেম্বর ভারতে বিমান হামলার মাধ্যমে ভারতের বিরুদ্ধে যুদ্ধে লিপ্ত হয়। অত:পর ভারত বাংলাদেশের স্বাধীনতা যুদ্ধে সরাসরিভাবে জড়িয়ে পড়ে। মুক্তিবাহিনী ও ভারতীয় সামরিক বাহিনীর সম্মিলিত আক্রমণের মুখে ইতোমধ্যে পর্যদুস্ত ও হতোদ্যম পাকিস্তানি সামরিক বাহিনী আত্মসমর্পণের সিদ্ধান্ত গ্রহণ করে। ১৬ ডিসেম্বর ঢাকার রেসকোর্স ময়দানে পাকিস্তান ৯৩,০০০ হাজার সৈন্যসহ আনুষ্ঠানিকভাবে আত্মসমর্পণ করে। এরই মাধ্যমে নয় মাস ব্যাপী রক্তক্ষয়ী মুক্তিযুদ্ধের অবসান হয়; প্রতিষ্ঠিত হয় বাঙালি জাতির স্বাধীন রাষ্ট্র বাংলাদেশ।
+</p>
+<br><br>
+
+
+<br><br><br>
+	<div id="footer">
+	<p style="color:black; font-size:20px; padding-top:50px"> Copyright মুক্তিযুদ্ধ আর্কাইভ  |  Contact: lwa@gmail.com | Version: 17.01.01<p>
+	</div>
+	
+</body>
+</html>
+<?php  include 'close.php';?>

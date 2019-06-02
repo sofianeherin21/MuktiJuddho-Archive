@@ -1,0 +1,30 @@
+#all-post {
+	height: 800px;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 300px;
+	text-alignment : left;
+	color:white;
+}
+
+#post-title{
+	color: red;
+	font-size:50px;
+}
+
+#user{
+	font-size:25px;
+}
+
+#post-description{
+	font-size:18px;
+}
+#single-post{
+	
+	border: 1px solid white;
+	margin-bottom:40px;
+	padding-left:40px;
+	padding-bottom:50px;
+	
+}

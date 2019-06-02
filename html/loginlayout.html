@@ -1,0 +1,134 @@
+
+<?php include 'myconfig.php'; ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Liberation War Archive</title>
+<style>
+
+body{
+background-color:black;
+color:white;
+}
+form {
+    border: 3px solid #f1f1f1;
+	height:500px;
+}
+
+input[type=text], input[type=password] {
+    width: 70%%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 50px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+.container1 {
+    padding: 26px;
+	margin-right:450px;
+	margin-left:450px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='style.css' rel='stylesheet'>
+<link href='slide.css' rel='stylesheet'>
+   
+
+
+<body>
+<div id="header">
+         
+		<img src="rsz_head.jpg" style="height:100px;margin-left:50px;width:30%;">
+  </div>
+<div class="navv">
+<ul>
+    <li><a href="home.html">হোম</a></li>
+	<li><a href="about.html">গুরুত্বপূর্ণ ঘটনাসমূহ </a></li>
+	<li><a href="news.html">তৎকালীন সংবাদ</a></li>
+	<li><a href="interview.html">সাক্ষাৎকার</a></li>
+	<li><a>মিডিয়া</a>
+	    <ul>
+		  <li><a href="photos.html">ছবি</a></li>
+	      <li><a href="songs.html">দেশাত্নবোধক গান</a></li>
+		  <li><a href="movies.html">চলচ্চিত্র</a></li>
+		</ul>
+	</li>
+	<li><a href="blog.html">ব্লগ</a>
+	<li style="float:right"><a href="login.html" ><?php if($_SESSION['logged'] == true) echo $_SESSION['username']; else echo " লগইন"?></a></li>
+	<li style="float:right"><a href="signup.html">সাইন আপ</a></li>
+</ul>
+</div>
+<div style="margin-top:120px">
+
+<div style="margin-top:300px; padding:20px">
+<h2 style="text-align:center">Login Form</h2>
+
+<div class="container1">
+
+<form action="login.php" method="post">
+  
+    <label style="text-align:left; padding-left:30px"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+	
+	</br>
+
+    <label><b>Password</b></label>
+    <input style="text-align:left; padding-left:30px" placeholder="Enter Password" name="psw" required>
+        </br>
+    <button type="submit">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+
+
+  <div class="container" >
+    <button type="button" class="cancelbtn" style="float:right">Cancel</button>
+    
+  </div>
+</form>  
+</div>
+</div>
+</div>
+</body>
+</html>
+<?php  include 'close.php';?>
